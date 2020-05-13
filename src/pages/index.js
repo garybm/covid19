@@ -9,11 +9,11 @@ import Map from 'components/Map';
 import axios from 'axios';
 
 const LOCATION = {
-  lat: 0,
-  lng: 0
+  lat: 38,
+  lng: -97
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 2;
+const DEFAULT_ZOOM = 4;
 
 const IndexPage = () => {
 
@@ -34,6 +34,7 @@ const IndexPage = () => {
     }
 
     const { data = [] } = response;
+    console.log(data)
     const hasData = Array.isArray(data) && data.length > 0;
 
     if ( !hasData ) return;
